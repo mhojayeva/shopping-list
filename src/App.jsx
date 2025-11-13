@@ -1,5 +1,8 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import components from "./pages/home.jsx";
+
 
 function App() {
   return (
