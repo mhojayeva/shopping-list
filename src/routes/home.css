@@ -1,0 +1,11 @@
+.home {
+    display: flex;
+}
+
+.home__item-list {
+    width: 50%;
+}
+
+.home__selection-list {
+    width: 50%;
+}
