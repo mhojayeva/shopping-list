@@ -4,8 +4,37 @@
 
 .home__item-list {
     width: 50%;
+    background-color: floralwhite;
+    border-radius: 20px;
+    
 }
 
 .home__selection-list {
     width: 50%;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+.nav-styles {
+   background-color: navajowhite;
+    font-size: 2rem;
+    border-radius: 10px;
+    text-decoration-color: ;
+    padding: 20px;
+    -webkit-text-fill-color: darkslategrey;
+}
+.form{
+    background-color: antiquewhite;
+    padding: 20px;
+    width: 30vh;
+    height: 70px;
+    border-radius: 18px;
+}
+.input{
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+.submitButton {
+      font-size: 1.5rem;
+      margin-top: 10px;
 }

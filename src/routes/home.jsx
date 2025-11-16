@@ -1,17 +1,26 @@
 import { useState } from "react";
 import ListItem from "../components/listeItem";
 import "./home.css";
+import AddItem from "./addItem";
 
 const Home = ({availableItems}) => {
-  const [selectionList, setSelectionList] = useState([]);
+  let initialSelection = []
+  const savedSelectionList = localStorage.getItem('selectionList')
 
-  const AddSelectionItem = (selectedItem) => {
+  if (savedSelectionList !== null) {
+      initialSelection = JSON.parse(savedSelectionList)
+  }
+
+  const [selectionList, setSelectionList] = useState(initialSelection);
+
+  const addSelectionItem = (selectedItem) => {
     const currentSelection = Array.from(selectionList)
     const existingSelection = currentSelection.find(selection => selection.item.name == selectedItem.name)
 
     if (typeof existingSelection != 'undefined') {
       existingSelection.quantity++
       setSelectionList(currentSelection)
+      localStorage.setItem('selectionList', JSON.stringify(currentSelection))
       return
     }
 
@@ -20,6 +29,7 @@ const Home = ({availableItems}) => {
       quantity: 1,
     })
     setSelectionList(currentSelection)
+    localStorage.setItem('selectionList', JSON.stringify(currentSelection))
   };
   
   return (
@@ -27,7 +37,7 @@ const Home = ({availableItems}) => {
       <div className="home__item-list">
         <h1>Select items</h1>
         {availableItems.map((availableItem, index) => (
-          <ListItem key={index} item={availableItem} onClickAdd={AddSelectionItem} />
+          <ListItem key={index} item={availableItem} onClickAdd={addSelectionItem} />
         ))}
       </div>
       <div className="home__selection-list">

@@ -6,21 +6,33 @@ import "./index.css";
 import AddItem from './routes/addItem';
 
 function App() {
-  const [availableItems] = useState([
+  const [availableItems, setAvailableItems] = useState([
     {name: "Apple"},
     {name: "Orange"},
   ])
 
+  function onAddItem(name){
+    const currentAvailableItems = Array.from(availableItems)
+    const exists = currentAvailableItems.find(availableItem => availableItem.name.toLowerCase() == name.toLowerCase())
+
+    if (typeof exists != 'undefined') {
+      return
+    }
+
+    currentAvailableItems.push({name: name})
+    setAvailableItems(currentAvailableItems)
+  }
+
   return (
     <BrowserRouter>
-      <nav>
+      <nav className='nav-styles'>
         <Link to="/">Home</Link> |{" "}
         <Link to="/add-item">AddItem</Link>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home availableItems={availableItems} test="1" />} />
-        <Route path="/add-item" element={<AddItem />} />
+        <Route path="/" element={<Home availableItems={availableItems} />} />
+        <Route path="/add-item" element={<AddItem onSubmit={onAddItem} />} />
       </Routes>
     </BrowserRouter>
   );

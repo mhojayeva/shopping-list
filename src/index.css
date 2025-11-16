@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  -webkit-text-fill-color: darkslategrey;
 }
 
 .Navbar {
@@ -28,13 +29,14 @@ h1 {
 }
 
 .item-container {
-  background-color: #dadbe5;
+  background-color: antiquewhite;
   padding: 10px;
   margin: 10px 0;
   width: 200px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 18px;
+  font-size: 23px;
+  -webkit-text-fill-color: darkslategray;
 }
 
 .add-button {
