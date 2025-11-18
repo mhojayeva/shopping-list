@@ -1,15 +1,18 @@
 import { useState } from "react";
 
 const AddItem = ({ onSubmit }) => {
+
   const [itemName, setItemName] = useState("");
 
   return (
     <div className="form">
-      <form
-        onSubmit={(e) => {
+      <form onSubmit={(e) => {
           e.preventDefault();
 
-          onSubmit(itemName);
+           if (itemName.trim() === "") return;
+
+             onSubmit(itemName);
+             setItemName ("")
         }}
       >
         <input className="input"
