@@ -4,6 +4,7 @@ import Home from './routes/home';
 import "./App.css";
 import "./index.css";
 import AddItem from './routes/addItem';
+import ListItem from './components/listeItem';
 
 function App() {
   const [availableItems, setAvailableItems] = useState([
@@ -15,6 +16,7 @@ function App() {
     const currentAvailableItems = Array.from(availableItems)
     const exists = currentAvailableItems.find(availableItem => availableItem.name.toLowerCase() == name.toLowerCase())
 
+
     if (typeof exists != 'undefined') {
       return
     }
@@ -22,6 +24,13 @@ function App() {
     currentAvailableItems.push({name: name})
     setAvailableItems(currentAvailableItems)
   }
+   function onClickDelete (item) {
+    const filtered = availableItems.filter (
+      i => i.name !== item.name
+    );
+    setAvailableItems(filtered);
+}
+
 
   return (
     <BrowserRouter>
@@ -31,8 +40,9 @@ function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home availableItems={availableItems} />} />
+        <Route path="/" element={<Home availableItems={availableItems} onClickDelete={onClickDelete} />} />
         <Route path="/add-item" element={<AddItem onSubmit={onAddItem} />} />
+       
       </Routes>
     </BrowserRouter>
   );
