@@ -1,16 +1,31 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from './routes/home';
 import "./App.css";
 import "./index.css";
 import AddItem from './routes/addItem';
 import ListItem from './components/listeItem';
 
+
 function App() {
-  const [availableItems, setAvailableItems] = useState([
-    {name: "Apple"},
-    {name: "Orange"},
-  ])
+  const [availableItems, setAvailableItems] = useState([]);
+     useEffect(() => {
+  fetch('products.json'
+    ,{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+      .then(function(response){
+        return response.json();
+      }) 
+      .then(function(response){
+        setAvailableItems(response.items)
+      })
+    }, []);
+
 
   function onAddItem(name){
     const currentAvailableItems = Array.from(availableItems)
@@ -31,18 +46,16 @@ function App() {
     setAvailableItems(filtered);
 }
 
-
   return (
     <BrowserRouter>
       <nav className='nav-styles'>
         <Link to="/">Home</Link> |{" "}
         <Link to="/add-item">AddItem</Link>
       </nav>
-
+      
       <Routes>
         <Route path="/" element={<Home availableItems={availableItems} onClickDelete={onClickDelete} />} />
         <Route path="/add-item" element={<AddItem onSubmit={onAddItem} />} />
-       
       </Routes>
     </BrowserRouter>
   );
