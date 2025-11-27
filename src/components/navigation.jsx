@@ -7,7 +7,7 @@ export default function Navbar ()
         <header>
             <div className="navbar">
                 <div className="navbar-item"> Home </div>
-                 <div className="navbar-item"> List </div>
+                 <div className="navbar-item-1"> List </div>
                 
             </div>
         </header>

@@ -24,17 +24,24 @@
 }
 .form{
     background-color: antiquewhite;
-    padding: 20px;
-    width: 30vh;
-    height: 70px;
+    padding: 4rem;
+    width: 70vh;
+    height: 100vh;
     border-radius: 18px;
+    font-size: 2rem;
 }
 .input{
-    font-size: 1.3rem;
+    font-size: 1.9rem;
     text-align: center;
+    margin: 20px;
 
 }
 .submitButton {
       font-size: 1.5rem;
       margin-top: 10px;
+      margin-left: 10rem;
+}
+.navbar-item-1 {
+    font-size: 2rem;
+    color: aqua;
 }

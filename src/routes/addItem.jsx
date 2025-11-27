@@ -15,6 +15,9 @@ const AddItem = ({ onSubmit }) => {
              setItemName ("")
         }}
       >
+        <p> You did not find your product,</p>
+          <p> Don not worry! </p>
+          <p>You can easily add it here </p>
         <input className="input"
           value={itemName}
           onChange={(e) => setItemName(e.target.value)}
