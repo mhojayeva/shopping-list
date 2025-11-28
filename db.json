@@ -1,0 +1,28 @@
+{
+  "items": [
+    { "name": "Apple", "icon": "🍎" },
+    { "name": "Banana", "icon": "🍌" },
+    { "name": "Orange", "icon": "🍊" },
+    { "name": "Strawberry", "icon": "🍓" },
+    { "name": "Grapes", "icon": "🍇" },
+    { "name": "Pineapple", "icon": "🍍" },
+    { "name": "Mango", "icon": "🥭" },
+    { "name": "Watermelon", "icon": "🍉" },
+    { "name": "Blueberry", "icon": "🫐" },
+    { "name": "Cherry", "icon": "🍒" },
+    { "name": "Carrot", "icon": "🥕" },
+    { "name": "Potato", "icon": "🥔" },
+    { "name": "Tomato", "icon": "🍅" },
+    { "name": "Cucumber", "icon": "🥒" },
+    { "name": "Pepper", "icon": "🌶️" },
+    { "name": "Corn", "icon": "🌽" },
+    { "name": "Lettuce", "icon": "🥬" },
+    { "name": "Eggplant", "icon": "🍆" },
+    { "name": "Onion", "icon": "🧅" },
+    { "name": "Mushroom", "icon": "🍄" },
+    { "name": "Kiwi", "icon": "🥝" },
+    { "name": "Lemon", "icon": "🍋" },
+    { "name": "Peach", "icon": "🍑" },
+    { "name": "Avocado", "icon": "🥑" }
+  ]
+}
