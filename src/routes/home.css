@@ -1,47 +1,45 @@
 .home {
-    display: flex;
+  display: flex;
 }
 
 .home__item-list {
-    width: 50%;
-    background-color: floralwhite;
-    border-radius: 20px;
-    
+  width: 50%;
+  background-color: floralwhite;
+  border-radius: 20px;
 }
 
 .home__selection-list {
-    width: 50%;
-    background-color: aliceblue;
-    border-radius: 20px;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 20px;
 }
 .nav-styles {
-   background-color: navajowhite;
-    font-size: 2rem;
-    border-radius: 10px;
-    text-decoration-color: ;
-    padding: 20px;
-    -webkit-text-fill-color: darkslategrey;
+  background-color: navajowhite;
+  font-size: 2rem;
+  border-radius: 10px;
+  text-decoration-color: ;
+  padding: 20px;
+  -webkit-text-fill-color: darkslategrey;
 }
-.form{
-    background-color: antiquewhite;
-    padding: 4rem;
-    width: 70vh;
-    height: 100vh;
-    border-radius: 18px;
-    font-size: 2rem;
+.form {
+  background-color: antiquewhite;
+  padding: 4rem;
+  width: 70vh;
+  height: 100vh;
+  border-radius: 18px;
+  font-size: 2rem;
 }
-.input{
-    font-size: 1.9rem;
-    text-align: center;
-    margin: 20px;
-
+.input {
+  font-size: 1.9rem;
+  text-align: center;
+  margin: 20px;
 }
 .submitButton {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      margin-left: 10rem;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-left: 10rem;
 }
 .navbar-item-1 {
-    font-size: 2rem;
-    color: aqua;
+  font-size: 2rem;
+  color: aqua;
 }
