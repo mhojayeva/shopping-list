@@ -7,18 +7,11 @@ import AddItem from "./routes/addItem";
 function App() {
   const [availableItems, setAvailableItems] = useState([]);
   useEffect(() => {
-    fetch("products.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    fetch("https://my-json-server.typicode.com/mhojayeva/shopping-list/items")
       .then(function (response) {
         return response.json();
       })
-      .then(function (response) {
-        setAvailableItems(response.items);
-      });
+      .then(setAvailableItems);
   }, []);
 
   function onAddSelectableItem(name) {
@@ -39,7 +32,7 @@ function App() {
     <BrowserRouter>
       <nav className="nav-styles">
         <Link to="/">Home</Link> | <Link to="/add-item"> Add Item </Link>|{" "}
-        <Link to="/jokes"> Interesting Facts </Link>
+        
       </nav>
 
       <Routes>

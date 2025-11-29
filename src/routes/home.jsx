@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SelectableItem from "../components/selectableItem";
 import "./home.css";
 import SelectedItem from "../components/selectedItem";
